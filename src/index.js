@@ -4,13 +4,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Clock from './chapter_04/clock';
 import CommentList from './chapter_05/CommentList';
+import Accommodate from './chapter_07/Accommodate';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
   root.render(
     <React.StrictMode>
       {/* <Library /> 
-      <Clock />*/}
-      <CommentList />
+      <Clock />
+      <CommentList />*/}
+      <Accommodate />
     </React.StrictMode>
   );
 
