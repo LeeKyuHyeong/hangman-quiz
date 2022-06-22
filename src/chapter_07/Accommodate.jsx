@@ -9,7 +9,7 @@ function Accommodate(props) {
 
   useEffect(() => {
     console.log("======================");
-    console.log("useEffect() is called.");
+    //console.log("useEffect() is called.");
     console.log(`isFull: ${isFull}`);
   });
 
@@ -19,7 +19,7 @@ function Accommodate(props) {
   }, [count]);
 
   return(
-    <div style={{ padding : 16}}>
+    <div style={{padding : 16}}>
       <p>{`총 ${count}명 수용했습니다.`}</p>
 
       <button onClick={increaseCount} disabled={isFull}>
