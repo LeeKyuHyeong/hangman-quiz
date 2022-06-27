@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Comment from "./../../chapter_05/Comment";
 
 const Wrapper = styled.div`
   width: calc(100% - 32px);
