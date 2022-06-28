@@ -4,7 +4,7 @@ import styled from "styled-components";
 import CommentList from "./../list/CommentList";
 import TextInput from "../ui/TextInput";
 import Button from "../ui/Button";
-import data from "../../data.json";
+import data from "../../etc/data.json";
 
 const Wrapper = styled.div`
   padding: 16px;
