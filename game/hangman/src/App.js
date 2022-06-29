@@ -1,4 +1,5 @@
 import './App.css';
+import GameBoard from './component/GameBoard'
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <h1>Welcome to Hangman!</h1>
       <p>Do you wanna play game?</p>
       <div>
-        <GameBoard></GameBoard>
+        <GameBoard secretWord="React" />
       </div>
     </div>
   );
