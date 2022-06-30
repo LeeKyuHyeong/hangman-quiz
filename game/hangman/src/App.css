@@ -10,7 +10,11 @@
   margin-top: 10px;
   flex-wrap: wrap;
   gap: 5px;
-  
+
+}
+
+.hidden {
+  display: none;
 }
 
 .button {
@@ -25,6 +29,7 @@
 .guessed {
   display: none;
 }
+
 .letter {
   border: 1px solid #ccc;
   width: 34px;
