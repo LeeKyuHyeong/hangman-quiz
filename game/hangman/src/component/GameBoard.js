@@ -7,7 +7,6 @@ export default function ({ secretWord }) {
   const [guessedLetters, setGuessedLetters] = useState([]);
   const letterGuessedHandler = (letter) => {
     let val = letter.toLowerCase();
-
     setGuessedLetters(prev => [...prev, val]);
   }
   return (
