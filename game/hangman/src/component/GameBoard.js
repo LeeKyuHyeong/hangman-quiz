@@ -3,7 +3,7 @@ import LetterGrid from "./LetterGrid";
 import ButtonGrid from "./ButtonGrid";
 import { useState } from 'react';
 
-export default function ({ secretWord, maxErrors }) {
+export default function ({ secretWord, maxErrors, isShown }) {
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [errorCnt, setErrorCnt] = useState(0);
 
@@ -16,7 +16,7 @@ export default function ({ secretWord, maxErrors }) {
     }
   }
   return (
-    <div>
+    <div className={isShown ? '' : 'hidden'}>
       <div>남은 횟수 : {maxErrors - errorCnt}</div>
       <LetterGrid secretWord={secretWord} guessedLetters={guessedLetters}//{['a','r']}
       />
