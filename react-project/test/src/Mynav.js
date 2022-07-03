@@ -14,7 +14,7 @@ export default class Mynav extends Component {
           onClick={(e) => {
             e.preventDefault();
             this.props.onChangePage(e.target.getAttribute('data-id'));
-            // this.props.onchangePage(e.target.dataSet.id);
+            // this.props.onChangePage(e.target.dataSet.id);
           }}>{data[i].title}</a>
       </li >);
       i++;

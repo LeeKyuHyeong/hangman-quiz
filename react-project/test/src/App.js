@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Myheader from './Myheader';
 import Mynav from './Mynav';
 import Mysection from './Mysection';
+import Controls from './Controls';
 import './App.css';
 
 export default class App extends Component {
@@ -82,6 +83,8 @@ export default class App extends Component {
 
         />
         <Mysection title={_title} desc={_desc} />
+
+        <Controls />
       </div >
     );
   }
