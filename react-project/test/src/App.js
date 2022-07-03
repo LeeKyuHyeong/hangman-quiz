@@ -13,7 +13,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: 'welcome',
+      mode: 'update',
       selected_id: 0,
       subject: { title: 'React', desc: 'Single Page Application' },
       welcome: { title: 'Welcome', desc: 'Welcome to React' },
@@ -62,12 +62,14 @@ export default class App extends Component {
       _section = <Mysection title={_title} desc={_desc} />
     } else if (this.state.mode === 'create') {
       _section = <Createsection onSubmit={(_title, _desc) => {
+        this.state.menus.push({
+          id: this.state.menus.length + 1,
+          title: _title,
+          desc: _desc
+        })
+
         this.setState({
-          meuns: {
-            id: this.state.menus.length + 1,
-            title: _title,
-            desc: _desc
-          }
+          meuns: this.state.menus
         })
       }//.bind(this)
       } />
