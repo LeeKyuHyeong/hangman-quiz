@@ -6,8 +6,7 @@ export default class Mynav extends Component {
     var data = this.props.data; //리팩토링
     var i = 0;
     while (i < data.length) {
-      lists.push("<li>" + data[i].title + "</li>");
-      console.log(lists);
+      lists.push(<li key={data[i].id}>{data[i].title}</li>);
       i++;
     }
     return (
