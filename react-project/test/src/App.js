@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import Myheader from './Myheader';
 import Mynav from './Mynav';
@@ -9,7 +10,9 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      mode: 'read',
       subject: { title: 'React', desc: 'Single Page Application' },
+      welcome: { title: 'Welcome', desc: 'Welcome to React' },
       menus: [
         {
           id: 1,
@@ -25,23 +28,38 @@ export default class App extends Component {
           id: 3,
           title: 'Javascript',
           desc: 'Javascript is for interactive'
-        },
-        {
-          id: 4,
-          title: 'react',
-          desc: 'component state props'
         }
-
       ]
     }
   }
   render() {
+    //console.log('App.js실행');
+    var _title, _desc = null;
+    if (this.state.mode === 'welcome') {
+      _title = this.state.welcome.title;
+      _desc = this.state.welcome.desc;
+    } else if (this.state.mode === 'read') {
+      _title = this.state.menus[0].title;
+      _desc = this.state.menus[0].desc;
+    } else {
+
+    }
+
     return (
       <div className='App'>
-        <Myheader title={this.state.subject.title} desc={this.state.subject.desc} />
+        <Myheader
+          title={this.state.subject.title}
+          desc={this.state.subject.desc}
+          onChangePage={() => {
+            this.setState({
+              mode: 'welcome',
+            })
+          }}
+        />
+
         <Mynav data={this.state.menus} />
-        <Mysection title="HTML" desc="Hypertext Markup Language" />
-      </div>
+        <Mysection title={_title} desc={_desc} />
+      </div >
     );
   }
 }

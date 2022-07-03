@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 export default class Mysection extends Component {
   render() {
+    //console.log('Mysection.js실행');
     return (
       <section>
         <article>
