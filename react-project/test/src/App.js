@@ -12,7 +12,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       mode: 'welcome',
-      selected_id: 2,
+      selected_id: 0,
       subject: { title: 'React', desc: 'Single Page Application' },
       welcome: { title: 'Welcome', desc: 'Welcome to React' },
       menus: [
@@ -36,7 +36,7 @@ export default class App extends Component {
   }
   render() {
     //console.log('App.js실행');
-    var _title, _desc = null;
+    var _title, _desc = "";
     if (this.state.mode === 'welcome') {
       _title = this.state.welcome.title;
       _desc = this.state.welcome.desc;
@@ -56,7 +56,9 @@ export default class App extends Component {
 
       _title = this.state.menus[this.state.selected_id].title;
       _desc = this.state.menus[this.state.selected_id].desc;
-    } else {
+    } else if (this.state.mode === 'create') {
+
+    } else if (this.state.mode === 'udpate') {
 
     }
 
@@ -84,7 +86,11 @@ export default class App extends Component {
         />
         <Mysection title={_title} desc={_desc} />
 
-        <Controls />
+        <Controls onChangePage={(str) => {
+          this.setState({
+            mode: str
+          })
+        }} />
       </div >
     );
   }
