@@ -10,7 +10,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: 'read',
+      mode: 'welcome',
+      selected_id: 2,
       subject: { title: 'React', desc: 'Single Page Application' },
       welcome: { title: 'Welcome', desc: 'Welcome to React' },
       menus: [
@@ -39,8 +40,21 @@ export default class App extends Component {
       _title = this.state.welcome.title;
       _desc = this.state.welcome.desc;
     } else if (this.state.mode === 'read') {
-      _title = this.state.menus[0].title;
-      _desc = this.state.menus[0].desc;
+      /*
+      반복문.. 클릭한 그 요소의 data-id값이 menus의 각 항목들에 있는지 확인
+      */
+      // var i = 0;
+      // while (i < this.state.menus.length) {
+      //   if (this.state.menus[i].id === 1) {
+      //     this.setState({ selected_id: this.state.menus[i].id })
+      //   } else {
+      //     continue;
+      //   }
+      //   i++;
+      // }
+
+      _title = this.state.menus[this.state.selected_id].title;
+      _desc = this.state.menus[this.state.selected_id].desc;
     } else {
 
     }
@@ -51,13 +65,22 @@ export default class App extends Component {
           title={this.state.subject.title}
           desc={this.state.subject.desc}
           onChangePage={() => {
-            this.setState({
-              mode: 'welcome',
-            })
+            this.setState({ mode: 'welcome' })
           }}
         />
 
-        <Mynav data={this.state.menus} />
+        <Mynav
+          data={this.state.menus}
+          onChangePage={(num) => {
+            this.setState(
+              {
+                mode: 'read',
+                selected_id: Number(num) - 1
+              })
+            debugger;
+          }}
+
+        />
         <Mysection title={_title} desc={_desc} />
       </div >
     );
