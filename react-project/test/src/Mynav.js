@@ -2,8 +2,14 @@
 import React, { Component } from 'react';
 
 export default class Mynav extends Component {
+  shouldComponentUpdate(nextProps) {
+    if (this.props.data !== nextProps.data) {
+      return true;
+    }
+    return false;
+  }
   render() {
-    //console.log('Mynav.js실행');
+    console.log('Mynav.js실행');
     var lists = [];
     var data = this.props.data; //리팩토링
     var i = 0;

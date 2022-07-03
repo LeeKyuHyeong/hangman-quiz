@@ -47,18 +47,17 @@ export default class App extends Component {
       /*
       반복문.. 클릭한 그 요소의 data-id값이 menus의 각 항목들에 있는지 확인
       */
-      // var i = 0;
-      // while (i < this.state.menus.length) {
-      //   if (this.state.menus[i].id === 1) {
-      //     this.setState({ selected_id: this.state.menus[i].id })
-      //   } else {
-      //     continue;
-      //   }
-      //   i++;
-      // }
+      var i = 0;
+      while (i < this.state.menus.length) {
+        var data = this.state.menus[i];
+        if (this.state.selected_id === data.id) {
+          _title = data.title;
+          _desc = data.desc;
+          break;
+        }
+        i++;
+      }
 
-      _title = this.state.menus[this.state.selected_id].title;
-      _desc = this.state.menus[this.state.selected_id].desc;
       _section = <Mysection title={_title} desc={_desc} />
     } else if (this.state.mode === 'create') {
       _section = <Createsection onSubmit={(_title, _desc) => {
@@ -93,7 +92,7 @@ export default class App extends Component {
             this.setState(
               {
                 mode: 'read',
-                selected_id: Number(num) - 1
+                selected_id: Number(num)
               })
           }}
         />
