@@ -61,9 +61,18 @@ export default class App extends Component {
       _desc = this.state.menus[this.state.selected_id].desc;
       _section = <Mysection title={_title} desc={_desc} />
     } else if (this.state.mode === 'create') {
-      _section = <Createsection title={_title} desc={_desc} />
-    } else if (this.state.mode === 'udpate') {
-
+      _section = <Createsection onSubmit={(_title, _desc) => {
+        this.setState({
+          meuns: {
+            id: this.state.menus.length + 1,
+            title: _title,
+            desc: _desc
+          }
+        })
+      }//.bind(this)
+      } />
+    } else if (this.state.mode === 'update') {
+      _section = <Readsection />
     }
 
     return (
@@ -84,7 +93,6 @@ export default class App extends Component {
                 mode: 'read',
                 selected_id: Number(num) - 1
               })
-            debugger;
           }}
         />
         {_section}

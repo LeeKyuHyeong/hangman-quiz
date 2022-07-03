@@ -5,7 +5,7 @@ export default class Readsection extends Component {
     return (
       <section>
         <article>
-
+          <h2>Read section</h2>
         </article>
       </section>
     );
