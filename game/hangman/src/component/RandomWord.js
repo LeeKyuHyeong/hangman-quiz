@@ -28,16 +28,17 @@ export default function RandomWord({onSet, isShown}) {
     
   ]
 
-  let category = Words.map((cate, index) => (
-    <button key={index} data-id={cate.id} onClick={(e) => {
-      e.preventDefault();
-      var num = e.target.getAttribute('data-id');
-      var rnd = Math.floor(Math.random() * Words[num-1].exam.length);
-      setSecretWord(Words[num-1].exam[rnd])
-      console.log(secretWord);
-      onSet(secretWord);
-
-    }}>{cate.cate}</button>
+  let category = Words.map((element, index) => (
+    <button key={index} data-id={element.id} 
+      onClick={(e) => {
+        e.preventDefault();
+        var num = e.target.getAttribute('data-id');
+        var rnd = Math.floor(Math.random() * Words[num-1].exam.length);
+        setSecretWord(Words[num-1].exam[rnd])
+        console.log(secretWord);
+        onSet(secretWord, element.cate);
+      }}
+    >{element.cate}</button>
   ))
   return(    
     <div className={isShown ? '' : 'hidden'}>
