@@ -3,7 +3,7 @@
 export default function (props) {
   return (
     <span className="letter">
-      {props.isShown === true ? props.value : " "}
+      {props.isShown ? props.value : " "}
     </span>
   );
 }
