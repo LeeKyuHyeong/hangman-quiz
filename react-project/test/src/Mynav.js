@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 export default class Mynav extends Component {
   shouldComponentUpdate(nextProps) {
+    console.log(this.props.data , nextProps.data);
     if (this.props.data !== nextProps.data) {
       return true;
     }

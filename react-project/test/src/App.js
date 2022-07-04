@@ -60,11 +60,11 @@ export default class App extends Component {
 
       _section = <Mysection title={_title} desc={_desc} />
     } else if (this.state.mode === 'create') {
-      _section = <Createsection onSubmit={(_title, _desc) => {
+      _section = <Createsection onSubmit={(tit, des) => {
         this.state.menus.push({
           id: this.state.menus.length + 1,
-          title: _title,
-          desc: _desc
+          title: tit,
+          desc: des
         })
 
         this.setState({

@@ -10,8 +10,9 @@ export default class Createsection extends Component {
           <form action="/create_process" method='post'
             onSubmit={(e) => {
               e.preventDefault();
-              console.log(_title, _desc);
-              this.props.onSubmit(_title, _desc);
+              //console.log(_title, _desc);
+              //this.props.onSubmit(_title, _desc);
+              this.props.onSubmit(e.target.title.value,e.target.desc.value);
             }}>
             <p>
               <input type="text" name='title' placeholder='title' onChange={(e) => {
