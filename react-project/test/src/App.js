@@ -6,7 +6,6 @@ import Mynav from './Mynav';
 import Mysection from './Mysection';
 import Controls from './Controls';
 import Createsection from './Createsection';
-import Readsection from './Updatesection';
 import Updatesection from './Updatesection';
 import './App.css';
 
@@ -39,7 +38,9 @@ export default class App extends Component {
       ]
     }
   }
-  render() {
+
+  getArticles() {
+
     //console.log('App.js실행');
     var _title, _desc, _section = null;
     if (this.state.mode === 'welcome') {
@@ -65,37 +66,34 @@ export default class App extends Component {
     } else if (this.state.mode === 'create') {
       _section = <Createsection onSubmit={(_title1, _desc1) => {
         this.current_id = this.current_id + 1;
-        // this.state.menus.push({
-        //   id: this.current_id,
-        //   title: tit,
-        //   desc: des
-        // });
-        // this.setState({
-        //   menus: this.state.menus
-        // });
+        // this.state.menus.push({id: this.current_id,title: tit, desc: des});
 
-        // var _menus = this.state.menus.concat({
-        //   id: this.current_id,
-        //   title: tit,
-        //   desc: des
-        // });
+        // var _menus = this.state.menus.concat({ id: this.current_id,title: tit,desc: des });
         var _menus = Array.from(this.state.menus);
-        _menus.push({
-          id: this.current_id,
-          title: _title1,
-          desc: _desc1
-        });
+        _menus.push({ id: this.current_id, title: _title1, desc: _desc1 });
 
         this.setState({
           menus: _menus
         });
-
-      }
-      } />;
+      }}
+      />;
     } else if (this.state.mode === 'update') {
-      _section = <Updatesection />
-    }
+      _section = <Updatesection onSubmit={(_title1, _desc1) => {
+        this.current_id = this.current_id + 1;
 
+        var _menus = Array.from(this.state.menus);
+        _menus.push({ id: this.current_id, title: _title1, desc: _desc1 });
+
+        this.setState({
+          menus: _menus
+        });
+      }}
+      />;
+    }
+    return _section;
+  }
+
+  render() {
     return (
       <div className='App'>
         <Myheader
@@ -116,7 +114,7 @@ export default class App extends Component {
               });
           }}
         />
-        {_section}
+        {this.getArticles()}
 
         <Controls onChangePage={(str) => {
           this.setState({
