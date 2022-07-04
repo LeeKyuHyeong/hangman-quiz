@@ -12,7 +12,7 @@ function App() {
       <h1>Welcome to Hangman!</h1>
       <p>Do you wanna play game?</p>
       <div>
-        <RandomWord onSet={(val) => setSecretWord(val)} />
+        <RandomWord onSet={(val) => setSecretWord(val)} isShown={!secretWord} />
         {/* <WordSelect onSet={(val) => setSecretWord(val)} isShown={!secretWord} /> */}
         <GameBoard secretWord={secretWord} maxErrors={6} isShown={secretWord} />
       </div>
