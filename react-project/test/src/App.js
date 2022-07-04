@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import Myheader from './Myheader';
@@ -5,13 +6,15 @@ import Mynav from './Mynav';
 import Mysection from './Mysection';
 import Controls from './Controls';
 import Createsection from './Createsection';
-import Readsection from './Readsection';
+import Readsection from './Updatesection';
+import Updatesection from './Updatesection';
 import './App.css';
 
 export default class App extends Component {
 
   constructor(props) {
     super(props);
+    this.current_id = 3;
     this.state = {
       mode: 'update',
       selected_id: 0,
@@ -42,7 +45,7 @@ export default class App extends Component {
     if (this.state.mode === 'welcome') {
       _title = this.state.welcome.title;
       _desc = this.state.welcome.desc;
-      _section = <Mysection title={_title} desc={_desc} />
+      _section = <Mysection title={_title} desc={_desc} />;
     } else if (this.state.mode === 'read') {
       /*
       반복문.. 클릭한 그 요소의 data-id값이 menus의 각 항목들에 있는지 확인
@@ -58,22 +61,39 @@ export default class App extends Component {
         i++;
       }
 
-      _section = <Mysection title={_title} desc={_desc} />
+      _section = <Mysection title={_title} desc={_desc} />;
     } else if (this.state.mode === 'create') {
-      _section = <Createsection onSubmit={(tit, des) => {
-        this.state.menus.push({
-          id: this.state.menus.length + 1,
-          title: tit,
-          desc: des
-        })
+      _section = <Createsection onSubmit={(_title1, _desc1) => {
+        this.current_id = this.current_id + 1;
+        // this.state.menus.push({
+        //   id: this.current_id,
+        //   title: tit,
+        //   desc: des
+        // });
+        // this.setState({
+        //   menus: this.state.menus
+        // });
+
+        // var _menus = this.state.menus.concat({
+        //   id: this.current_id,
+        //   title: tit,
+        //   desc: des
+        // });
+        var _menus = Array.from(this.state.menus);
+        _menus.push({
+          id: this.current_id,
+          title: _title1,
+          desc: _desc1
+        });
 
         this.setState({
-          meuns: this.state.menus
-        })
-      }//.bind(this)
-      } />
+          menus: _menus
+        });
+
+      }
+      } />;
     } else if (this.state.mode === 'update') {
-      _section = <Readsection />
+      _section = <Updatesection />
     }
 
     return (
@@ -93,7 +113,7 @@ export default class App extends Component {
               {
                 mode: 'read',
                 selected_id: Number(num)
-              })
+              });
           }}
         />
         {_section}
@@ -101,7 +121,7 @@ export default class App extends Component {
         <Controls onChangePage={(str) => {
           this.setState({
             mode: str
-          })
+          });
         }} />
       </div >
     );

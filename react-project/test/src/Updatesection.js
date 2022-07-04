@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-export default class Createsection extends Component {
+export default class Updatesection extends Component {
   render() {
 
     return (
       <section>
         <article>
-          <h2>Create section</h2>
+          <h2>Update section</h2>
           <form action="/create_process" method='post'
             onSubmit={(e) => {
               e.preventDefault();

@@ -2,9 +2,13 @@
 import React, { Component } from 'react';
 
 export default class Mynav extends Component {
-  shouldComponentUpdate(nextProps) {
-    console.log(this.props.data , nextProps.data);
-    if (this.props.data !== nextProps.data) {
+  shouldComponentUpdate(newProps, newState) {
+    console.log(
+      'sCU 작동',
+      newProps.data,
+      this.props.data
+    );
+    if (this.props.data !== newProps.data) {
       return true;
     }
     return false;
