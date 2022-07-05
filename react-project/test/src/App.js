@@ -39,7 +39,7 @@ export default class App extends Component {
     }
   }
 
-  getArticles() {
+  getArticles() { //refactoring 리팩토링 
 
     //console.log('App.js실행');
     var _title, _desc, _section = null;
