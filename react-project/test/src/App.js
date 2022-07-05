@@ -73,10 +73,10 @@ export default class App extends Component {
       _result = this.getReadSection();
       console.log(_result);
       _section = <Updatesection title={_result.title} desc={_result.desc} onSubmit={(_title1, _desc1) => {
-        this.current_id = this.current_id + 1;
 
         var _menus = Array.from(this.state.menus);
-        _menus.push({ id: this.current_id, title: _title1, desc: _desc1 });
+        _menus[_result.id - 1].title = _title1;
+        _menus[_result.id - 1].desc = _desc1;
 
         this.setState({
           menus: _menus
