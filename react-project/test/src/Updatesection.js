@@ -20,7 +20,7 @@ export default class Updatesection extends Component {
               <input type="text" name='title' value={this.props.title} />
             </p>
             <p>
-              <textarea name="desc" value={this.props.desc}></textarea>
+              <textarea name="desc">{this.props.desc}</textarea>
             </p>
             <p>
               <input type="submit" value='전송'></input>

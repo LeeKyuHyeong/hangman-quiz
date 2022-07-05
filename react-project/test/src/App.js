@@ -15,7 +15,7 @@ export default class App extends Component {
     super(props);
     this.current_id = 3;
     this.state = {
-      mode: 'update',
+      mode: 'welcome',
       selected_id: 0,
       subject: { title: 'React', desc: 'Single Page Application' },
       welcome: { title: 'Welcome', desc: 'Welcome to React' },
@@ -51,9 +51,9 @@ export default class App extends Component {
       /*
       반복문.. 클릭한 그 요소의 data-id값이 menus의 각 항목들에 있는지 확인
       */
-      var _reulst = this.getReadSection();
+      var _result = this.getReadSection();
 
-      _section = <Mysection title={_reulst.title} desc={_reulst.desc} />;
+      _section = <Mysection title={_result.title} desc={_result.desc} />;
     } else if (this.state.mode === 'create') {
       _section = <Createsection onSubmit={(_title1, _desc1) => {
         this.current_id = this.current_id + 1;
@@ -70,9 +70,9 @@ export default class App extends Component {
       />;
     } else if (this.state.mode === 'update') {
 
-      _reulst = this.getReadSection();
-
-      _section = <Updatesection title={_reulst.title} desc={_reulst.desc} onSubmit={(_title1, _desc1) => {
+      _result = this.getReadSection();
+      console.log(_result);
+      _section = <Updatesection title={_result.title} desc={_result.desc} onSubmit={(_title1, _desc1) => {
         this.current_id = this.current_id + 1;
 
         var _menus = Array.from(this.state.menus);
