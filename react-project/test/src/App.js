@@ -51,18 +51,9 @@ export default class App extends Component {
       /*
       반복문.. 클릭한 그 요소의 data-id값이 menus의 각 항목들에 있는지 확인
       */
-      var i = 0;
-      while (i < this.state.menus.length) {
-        var data = this.state.menus[i];
-        if (this.state.selected_id === data.id) {
-          _title = data.title;
-          _desc = data.desc;
-          break;
-        }
-        i++;
-      }
+      var _reulst = this.getReadSection();
 
-      _section = <Mysection title={_title} desc={_desc} />;
+      _section = <Mysection title={_reulst.title} desc={_reulst.desc} />;
     } else if (this.state.mode === 'create') {
       _section = <Createsection onSubmit={(_title1, _desc1) => {
         this.current_id = this.current_id + 1;
@@ -78,7 +69,10 @@ export default class App extends Component {
       }}
       />;
     } else if (this.state.mode === 'update') {
-      _section = <Updatesection onSubmit={(_title1, _desc1) => {
+
+      _reulst = this.getReadSection();
+
+      _section = <Updatesection title={_reulst.title} desc={_reulst.desc} onSubmit={(_title1, _desc1) => {
         this.current_id = this.current_id + 1;
 
         var _menus = Array.from(this.state.menus);
@@ -92,7 +86,16 @@ export default class App extends Component {
     }
     return _section;
   }
-
+  getReadSection() {
+    var i = 0;
+    while (i < this.state.menus.length) {
+      var data = this.state.menus[i];
+      if (this.state.selected_id === data.id) {
+        return data;
+      }
+      i++;
+    }
+  }
   render() {
     return (
       <div className='App'>

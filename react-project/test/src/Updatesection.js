@@ -7,7 +7,7 @@ export default class Updatesection extends Component {
       <section>
         <article>
           <h2>Update section</h2>
-          <form action="/create_process" method='post'
+          <form action="/update_process" method='post'
             onSubmit={(e) => {
               e.preventDefault();
               //this.props.onSubmit(_title, _desc);
@@ -17,10 +17,10 @@ export default class Updatesection extends Component {
               );
             }}>
             <p>
-              <input type="text" name='title' placeholder='title' />
+              <input type="text" name='title' value={this.props.title} />
             </p>
             <p>
-              <textarea name="desc" placeholder='description'></textarea>
+              <textarea name="desc" value={this.props.desc}></textarea>
             </p>
             <p>
               <input type="submit" value='전송'></input>
