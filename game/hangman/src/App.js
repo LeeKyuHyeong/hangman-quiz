@@ -17,7 +17,7 @@ function App() {
           onSet={(val, cate) => {
             setSecretWord(val);
             setCategory(cate);
-            }} 
+            }}
           isShown={!secretWord} />
         {/* <WordSelect onSet={(val) => setSecretWord(val)} isShown={!secretWord} /> */}
         <GameBoard secretWord={secretWord} maxErrors={6} isShown={secretWord} category={category}/>
