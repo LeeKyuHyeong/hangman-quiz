@@ -1,7 +1,6 @@
-import './App.css';
-import GameBoard from './component/GameBoard'
-import WordSelect from './component/WordSelect'
 import { useState } from 'react';
+import './App.css';
+import GameBoard from './component/GameBoard';
 import RandomWord from './component/RandomWord';
 
 function App() {
