@@ -1,7 +1,6 @@
-import './App.css';
-import GameBoard from './component/GameBoard'
-import WordSelect from './component/WordSelect'
 import { useState } from 'react';
+import './App.css';
+import GameBoard from './component/GameBoard';
 import RandomWord from './component/RandomWord';
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
           onSet={(val, cate) => {
             setSecretWord(val);
             setCategory(cate);
-            }} 
+            }}
           isShown={!secretWord} />
         {/* <WordSelect onSet={(val) => setSecretWord(val)} isShown={!secretWord} /> */}
         <GameBoard secretWord={secretWord} maxErrors={6} isShown={secretWord} category={category}/>

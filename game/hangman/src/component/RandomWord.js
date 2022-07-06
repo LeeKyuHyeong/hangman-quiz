@@ -1,8 +1,6 @@
-import { useState } from "react";
-
 
 export default function RandomWord({onSet, isShown}) {
-  const [secretWord, setSecretWord] = useState('');
+  
   let Words = [
     {
       id: 1,
@@ -24,26 +22,25 @@ export default function RandomWord({onSet, isShown}) {
       exam:[
         'korea', 'england', 'china', 'swiss', 'mexico', 'brazil'
       ]
-    }
-    
+    }    
   ]
 
-  let category = Words.map((element, index) => (
-    <button key={index} data-id={element.id} 
+  let _category = Words.map((element, index) => (
+    <button className='btn_another' key={index} data-id={element.id} 
       onClick={(e) => {
         e.preventDefault();
+        
         var num = e.target.getAttribute('data-id');
         var rnd = Math.floor(Math.random() * Words[num-1].exam.length);
-        setSecretWord(Words[num-1].exam[rnd])
-        console.log(secretWord);
-        onSet(secretWord, element.cate);
+        
+        onSet(Words[num-1].exam[rnd], element.cate);
       }}
     >{element.cate}</button>
-  ))
+  ));
   return(    
     <div className={isShown ? '' : 'hidden'}>
       <h4>Choose Category</h4>
-      {category}
+      {_category}
     </div>
   );
 }
