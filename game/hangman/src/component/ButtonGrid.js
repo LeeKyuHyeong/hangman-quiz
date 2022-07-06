@@ -1,8 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
-import Button from "./Button";
+import AnotherButton from "./AnotherButton";
+import WordButton from "./WordButton";
 
-export default function ({ letterGuessed, isShown }) {
-
+export default function ({ letterGuessed, isShown, secretWord}) {
+  
   let className = 'flex flex-wrap'
   className += !isShown ? ' hidden' : '';
 
@@ -10,8 +11,14 @@ export default function ({ letterGuessed, isShown }) {
     'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
     'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   let buttons = letters.map((letter, index) => (
-    <Button value={letter} key={index} setLetter={letterGuessed} />
+    <WordButton value={letter} key={index} setLetter={letterGuessed} />
   ));
-
-  return <div className={className}>{buttons}</div>
+  return <div >
+    <div className={className}>
+      {buttons}
+    </div>
+    <div className={!className}>
+      <AnotherButton secretWord={secretWord} />
+    </div>
+  </div>
 }
