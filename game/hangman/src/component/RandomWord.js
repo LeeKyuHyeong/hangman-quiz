@@ -26,7 +26,7 @@ export default function RandomWord({onSet, isShown}) {
   ]
 
   let _category = Words.map((element, index) => (
-    <button key={index} data-id={element.id} 
+    <button className='btn_another' key={index} data-id={element.id} 
       onClick={(e) => {
         e.preventDefault();
         
