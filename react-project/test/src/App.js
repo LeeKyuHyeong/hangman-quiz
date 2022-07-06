@@ -28,7 +28,7 @@ export default class App extends Component {
         {
           id: 2,
           title: 'CSS',
-          desc: 'Cascade Style Sheet'
+          desc: 'Css is for Design'
         },
         {
           id: 3,
