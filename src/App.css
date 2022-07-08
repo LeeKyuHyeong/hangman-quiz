@@ -1,23 +1,25 @@
 body {
-  background: lightgrey;
+  background: linear-gradient(white, rgb(235, 28, 28));
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
 a {
   text-decoration: none;
 }
 
 .quizTbl {
-  color: darkmagenta;
+  color: darkblue;
   width: 1000px;
   height: 400px;
   border: 1px solid grey;
-  border-radius: 5px;
-  border-collapse: collapse;
-  text-align: center;
+  border-radius: 20px;
+  text-align: center; 
 }
 
 .quizTbl th {
@@ -26,6 +28,7 @@ a {
   padding: 10px;
   font-size: 20px;
   font-weight: 600;
+  text-shadow: beige 3px 0 20px;
 }
 
 .quizTbl td {
@@ -36,6 +39,7 @@ a {
 .score {
   font-size: 18px;
   font-weight: 600;
+  text-shadow: #fff 2px 0 15px;
 }
 
 .quest {
@@ -71,4 +75,19 @@ a {
 
 .selected:hover p{
   font-size: small;
+}
+
+@media screen and (max-width:991px) {
+  .quizTbl {
+    width: 700px;
+    height: 350px;
+    transition: 0.5s;
+  }
+  .quest {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
 }

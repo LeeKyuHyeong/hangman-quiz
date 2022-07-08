@@ -36,19 +36,19 @@ function App() {
     <th key={index}>{element.title}</th>
   );
 
-  var makeTr  = quizTbl[0].score.map((element) =>
+  var makeTr  = score.map((element) =>
     <TrMaker score={element} />
-  )
+  );
 
   return (
     <div className="App">
+      <h2>퀴즈퀴즈 타임</h2>
       <table className="quizTbl">
         <tr>
           <th>/</th>
-          {makeTh}          
+          {makeTh}
         </tr>
         {makeTr}
-        
       </table>
     </div>
   );

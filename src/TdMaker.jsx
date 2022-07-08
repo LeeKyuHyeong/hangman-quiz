@@ -12,7 +12,6 @@ export default function TdMaker(props) {
         e.preventDefault();
         setIsSelected(true);
       }}>{props.title} {props.score}점</a>
-      
     </td>
   );
 }
