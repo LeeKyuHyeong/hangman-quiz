@@ -8,28 +8,23 @@ function App() {
   const quizTbl = [
     {
       id:1,
-      title:'역사',
-      score:score
+      title:'역사'
     },
     {
       id:2,
-      title:'상식',
-      score:score
+      title:'상식'
     },
     {
       id:3,
-      title:'넌센스',
-      score:score
+      title:'넌센스'
     },
     {
       id:4,
-      title:'가요',
-      score:score
+      title:'가요'
     },
     {
       id:5,
-      title:'랩',
-      score:score
+      title:'랩'
     }
   ];
   var makeTh = quizTbl.map((element, index) => 
