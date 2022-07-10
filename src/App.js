@@ -3,35 +3,35 @@ import TrMaker from "./TrMaker";
 
 function App() {
   const score = [
-    5,4,3,2,1
+    5, 4, 3, 2, 1
   ];
   const quizTbl = [
     {
-      id:1,
-      title:'역사'
+      id: 1,
+      title: '역사'
     },
     {
-      id:2,
-      title:'상식'
+      id: 2,
+      title: '상식'
     },
     {
-      id:3,
-      title:'넌센스'
+      id: 3,
+      title: '넌센스'
     },
     {
-      id:4,
-      title:'가요'
+      id: 4,
+      title: '가요'
     },
     {
-      id:5,
-      title:'랩'
+      id: 5,
+      title: '랩'
     }
   ];
-  var makeTh = quizTbl.map((element, index) => 
+  var makeTh = quizTbl.map((element, index) =>
     <th key={index}>{element.title}</th>
   );
 
-  var makeTr  = score.map((element) =>
+  var makeTr = score.map((element) =>
     <TrMaker score={element} />
   );
 
