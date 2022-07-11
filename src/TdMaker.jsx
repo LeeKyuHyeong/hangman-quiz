@@ -16,11 +16,11 @@ export default function TdMaker(props) {
         setIsSelected(true);
       }}>{props.title} {props.score}점</a>
       <a>키워드 : </a> */}
-        <div>
-          <p className="front card">{props.title} {props.score}점</p>
+        <div className="front card">
+          <p>{props.title} {props.score}점</p>
         </div>
-        <div>
-          <p className="back card">{props.keyword}</p>          
+        <div className="back card">
+          <p>{props.keyword}</p> 
         </div>
       </div>
     </td>

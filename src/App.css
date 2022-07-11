@@ -11,7 +11,8 @@ h2 {
   margin-bottom: 30px;
 }
 
-a, p {
+a,
+p {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -65,13 +66,13 @@ a, p {
   cursor: pointer;
 }
 
-.quest:hover a {
+.quest:hover p {
   transition: 0.5s;
   color: magenta;
   font-size: large;
 }
 
-.selected {
+.selected .card {
   transition: 1s;
   opacity: 0.1;
   text-decoration: line-through;
@@ -86,8 +87,8 @@ a, p {
 }
 
 .card {
-  width:150px;
-  height:30px;
+  width: 165px;
+  height: 27px;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-perspective: 0;
@@ -96,19 +97,28 @@ a, p {
   visibility: visible;
   transition: 1s;
 }
+
 .front {
   position: absolute;
-  transform: rotateY(0deg);
+  /* transform: rotateY(0deg); */
+  transform: rotateX(0deg);
 }
+
 .back {
-  transform: rotateY(-180deg);
+  /* transform: rotateY(-180deg); */
+  transform: rotateX(-180deg);
 }
+
 .card_wrap:hover .front {
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
+  transform: rotateX(180deg);
 }
+
 .card_wrap:hover .back {
-  transform: rotateY(0deg);
+  /* transform: rotateY(0deg); */
+  transform: rotateX(0deg);
 }
+
 @media screen and (max-width:991px) {
   .quizTbl {
     width: 700px;
