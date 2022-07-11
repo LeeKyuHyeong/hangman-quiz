@@ -1,9 +1,10 @@
 body {
-  background: linear-gradient(white, rgb(235, 28, 28));
+  background: linear-gradient(grey, beige);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
@@ -16,6 +17,19 @@ p {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+.btn_refresh {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+.btn_refresh:hover {
+  background: #000;
+  transition: 0.5s;
+  color: white;
+  box-shadow: #fff 5px 5px 5px ;
 }
 
 .quizTbl {
@@ -84,6 +98,7 @@ p {
 
 .card_wrap {
   perspective: 100rem;
+  color: brown;
 }
 
 .card {
@@ -95,7 +110,7 @@ p {
   -webkit-transition: 1s;
   backface-visibility: hidden;
   visibility: visible;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .front {
