@@ -11,9 +11,13 @@ h2 {
   margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 a, p {
   margin: 0;
   padding: 0;
+=======
+a {
+>>>>>>> e5c1e656c221f4c33964af4db6c93bdd20bc609a
   text-decoration: none;
 }
 
