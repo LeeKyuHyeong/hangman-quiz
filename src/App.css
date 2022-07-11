@@ -25,11 +25,12 @@ p {
   border: 1px solid lightgrey;
   border-radius: 4px;
 }
+
 .btn_refresh:hover {
   background: #000;
   transition: 0.5s;
   color: white;
-  box-shadow: #fff 5px 5px 5px ;
+  box-shadow: #fff 5px 5px 5px;
 }
 
 .quizTbl {

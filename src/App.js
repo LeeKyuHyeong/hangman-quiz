@@ -51,8 +51,7 @@ function App() {
       <button className="btn_refresh" onClick={(e) => {
         e.preventDefault();
         history.go(0);
-      }
-        }>새로고침</button>
+      }}>새로고침</button>
       <table className="quizTbl">
         <tr>
           <th>/</th>
