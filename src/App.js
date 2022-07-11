@@ -31,8 +31,8 @@ function App() {
     <th key={index}>{element.title}</th>
   );
 
-  var makeTr  = score.map((element) =>
-    <TrMaker score={element} />
+  var makeTr  = score.map((element,index) =>
+    <TrMaker title={quizTbl[index].title} score={element} />
   );
 
   return (
