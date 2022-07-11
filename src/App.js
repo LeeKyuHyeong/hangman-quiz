@@ -31,13 +31,8 @@ function App() {
     <th key={index}>{element.title}</th>
   );
 
-<<<<<<< HEAD
   var makeTr  = score.map((element,index) =>
     <TrMaker title={quizTbl[index].title} score={element} />
-=======
-  var makeTr = score.map((element) =>
-    <TrMaker score={element} />
->>>>>>> e5c1e656c221f4c33964af4db6c93bdd20bc609a
   );
 
   return (
