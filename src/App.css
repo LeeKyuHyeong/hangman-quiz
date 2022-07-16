@@ -84,7 +84,7 @@ p {
 .quest:hover p {
   transition: 0.5s;
   color: magenta;
-  font-size: large;
+  /* font-size: large; */
 }
 
 .selected .card {
