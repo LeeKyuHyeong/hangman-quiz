@@ -136,10 +136,16 @@ p {
 }
 
 @media screen and (max-width:991px) {
+
   .quizTbl {
-    width: 700px;
+    width: 600px;
     height: 350px;
     transition: 0.5s;
+  }
+
+  .quizTbl td {
+    margin: 3px;
+    padding: 5px;
   }
 
   .quest {
