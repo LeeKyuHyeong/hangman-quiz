@@ -47,11 +47,11 @@ function App() {
 
   return (
     <div className="App">
-      <h2>퀴즈퀴즈 시간</h2>
+      <h2>퀴즈퀴즈 타임</h2>
       <button className="btn_refresh" onClick={(e) => {
         e.preventDefault();
         history.go(0);
-      }}>새로고침</button>
+      }}>refresh</button>
       <table className="quizTbl">
         <tr>
           <th>/</th>
