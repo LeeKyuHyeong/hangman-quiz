@@ -1,43 +1,43 @@
 
-export default function RandomWord({onSet, isShown}) {
-  
+export default function RandomWord({ onSet, isShown }) {
+
   let Words = [
     {
       id: 1,
-      cate:'sports',
-      exam:[
-        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball'
+      cate: 'sports',
+      exam: [
+        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating'
       ]
     },
     {
       id: 2,
-      cate:'fruits',
-      exam:[
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon'
+      cate: 'fruits',
+      exam: [
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi'
       ]
     },
     {
       id: 3,
-      cate:'countries',
-      exam:[
-        'korea', 'england', 'china', 'swiss', 'mexico', 'brazil'
+      cate: 'countries',
+      exam: [
+        'korea', 'england', 'china', 'swiss', 'mexico', 'brazil', 'japan'
       ]
-    }    
+    }
   ]
 
   let _category = Words.map((element, index) => (
-    <button className='btn_another' key={index} data-id={element.id} 
+    <button className='btn_another' key={index} data-id={element.id}
       onClick={(e) => {
         e.preventDefault();
-        
+
         var num = e.target.getAttribute('data-id');
-        var rnd = Math.floor(Math.random() * Words[num-1].exam.length);
-        
-        onSet(Words[num-1].exam[rnd], element.cate);
+        var rnd = Math.floor(Math.random() * Words[num - 1].exam.length);
+
+        onSet(Words[num - 1].exam[rnd], element.cate);
       }}
     >{element.cate}</button>
   ));
-  return(    
+  return (
     <div className={isShown ? '' : 'hidden'}>
       <h4>Choose Category</h4>
       {_category}
