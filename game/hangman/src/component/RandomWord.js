@@ -6,21 +6,21 @@ export default function RandomWord({ onSet, isShown }) {
       id: 1,
       cate: 'sports',
       exam: [
-        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball'
+        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football'
       ]
     },
     {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape'
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango'
       ]
     },
     {
       id: 3,
       cate: 'countries',
       exam: [
-        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia'
+        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Papaya'
       ]
     }
   ]
