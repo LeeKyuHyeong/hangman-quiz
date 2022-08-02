@@ -13,7 +13,7 @@ export default function RandomWord({ onSet, isShown }) {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'Papaya', 'coconut',
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry'
       ]
     },
     {
