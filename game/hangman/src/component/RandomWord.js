@@ -13,14 +13,14 @@ export default function RandomWord({ onSet, isShown }) {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime'
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry'
       ]
     },
     {
       id: 3,
       cate: 'countries',
       exam: [
-        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia'
+        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada'
       ]
     }
   ]
