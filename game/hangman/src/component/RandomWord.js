@@ -6,22 +6,21 @@ export default function RandomWord({ onSet, isShown }) {
       id: 1,
       cate: 'sports',
       exam: [
-        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football', 'crosscountry', 'kinball', 'swimming', 'climing', 'e-sports', 'kayaking', 'pingpong', 'shorttrack'
+        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football', 'crosscountry', 'kinball', 'swimming', 'climing', 'e-sports', 'kayaking', 'pingpong', 'shorttrack', ''
       ]
     },
     {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear'
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba'
       ]
     },
     {
       id: 3,
       cate: 'countries',
       exam: [
-        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India'
-      ]
+        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India', 'Norway', 'Uruguay'
     }
   ]
 
