@@ -21,6 +21,7 @@ export default function RandomWord({ onSet, isShown }) {
       cate: 'countries',
       exam: [
         'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India', 'Norway', 'Uruguay', 'Hungary'
+      ]
     }
   ]
 
