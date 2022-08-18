@@ -13,14 +13,14 @@ export default function RandomWord({ onSet, isShown }) {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba', 'chestnut', 'fig'
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba', 'chestnut', 'fig', 'pomegranate'
       ]
     },
     {
       id: 3,
       cate: 'countries',
       exam: [
-        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India', 'Norway', 'Uruguay', 'Hungary', 'Georgia'
+        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India', 'Norway', 'Uruguay', 'Hungary', 'Georgia', 'Bolivia'
       ]
     }
   ]
