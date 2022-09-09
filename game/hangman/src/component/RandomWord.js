@@ -6,7 +6,7 @@ export default function RandomWord({ onSet, isShown }) {
       id: 1,
       cate: 'sports',
       exam: [
-        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football', 'crosscountry', 'kinball', 'swimming', 'climing', 'e-sports', 'kayaking', 'pingpong', 'shorttrack', 'stacking', ''
+        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football', 'crosscountry', 'kinball', 'swimming', 'climing', 'e-sports', 'kayaking', 'pingpong', 'shorttrack', 'stacking', 'vicpie'
       ]
     },
     {
