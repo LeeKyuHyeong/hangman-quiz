@@ -6,14 +6,14 @@ export default function RandomWord({ onSet, isShown }) {
       id: 1,
       cate: 'sports',
       exam: [
-        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football', 'crosscountry', 'kinball', 'swimming', 'climing', 'e-sports', 'kayaking', 'pingpong', 'shorttrack', 'stacking', 'vicpie', 'handphone', 'smartphone', 'ttazza', 'hannibal', 'hangeul', 'standard', 'kiho', 'gijun'
+        'soccer', 'baseball', 'basketball', 'frisbee', 'hockey', 'volleyball', 'skating', 'frisbee', 'flowball', 'football', 'crosscountry', 'kinball', 'swimming', 'climing', 'e-sports', 'kayaking', 'pingpong', 'shorttrack', 'stacking', 'vicpie', 'handphone', 'smartphone', 'ttazza', 'hannibal', 'hangeul', 'standard', 'kiho', 'gijun', 'gwangyoung'
       ]
     },
     {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba', 'chestnut', 'fig', 'pomegranate', 'quince', 'jujube','msoffice', 'hwp', 'excel', 'word', 'powerpoint', 'keyword', 'keyboard', 'headset', 'userInterface'
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba', 'chestnut', 'fig', 'pomegranate', 'quince', 'jujube', 'msoffice', 'hwp', 'excel', 'word', 'powerpoint', 'keyword', 'keyboard', 'headset', 'userInterface'
       ]
     },
     {
