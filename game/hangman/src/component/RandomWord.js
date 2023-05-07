@@ -13,7 +13,7 @@ export default function RandomWord({ onSet, isShown }) {
       id: 2,
       cate: 'fruits',
       exam: [
-        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba', 'chestnut', 'fig', 'pomegranate', 'quince', 'jujube', 'msoffice', 'hwp', 'excel', 'word', 'powerpoint', 'keyword', 'keyboard', 'headset', 'userInterface', 'logitech mx master 3s', 'logitech mx keys'
+        'apple', 'orange', 'banana', 'melon', 'peach', 'watermelon', 'kiwi', 'tomato', 'grape', 'mango', 'papaya', 'coconut', 'pineapple', 'cherry', 'yuja', 'Mandarin', 'lime', 'blueberry', 'plum', 'avocado', 'pear', 'strawberry', 'guaba', 'chestnut', 'fig', 'pomegranate', 'quince', 'jujube', 'msoffice', 'hwp', 'excel', 'word', 'powerpoint', 'keyword', 'keyboard', 'headset', 'userInterface', 'logitech mx master 3s', 'logitech mx keys', 'LG moniter'
       ]
     },
     {
