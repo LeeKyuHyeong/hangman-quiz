@@ -20,7 +20,7 @@ export default function RandomWord({ onSet, isShown }) {
       id: 3,
       cate: 'countries',
       exam: [
-        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India', 'Norway', 'Uruguay', 'Hungary', 'Georgia', 'Bolivia', 'Belgium', 'Guatemala', 'Moroco', 'Croatia', 'Cortdibuar', 'Soorinam', 'bietnam', 'valcan', 'macedonia', 'otawa', 'mesophotamia', 'egae', 'august', 'newton', 'einsewtein', 'prometeus', 'jeus', 'heracules', 'hades'
+        'Korea', 'England', 'China', 'Swiss', 'Mexico', 'Brazil', 'Japan', 'America', 'Russia', 'Mongole', 'Greece', 'UAE', 'France', 'Argentina', 'Bahrain', 'Cambodia', 'Canada', 'Chile', 'Denmark', 'India', 'Norway', 'Uruguay', 'Hungary', 'Georgia', 'Bolivia', 'Belgium', 'Guatemala', 'Moroco', 'Croatia', 'Cortdibuar', 'Soorinam', 'bietnam', 'valcan', 'macedonia', 'otawa', 'mesophotamia', 'egae', 'august', 'newton', 'einsewtein', 'prometeus', 'jeus', 'heracules', 'hades', 'perusephone'
       ]
     }
   ]
