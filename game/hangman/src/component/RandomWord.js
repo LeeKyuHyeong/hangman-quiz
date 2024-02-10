@@ -27,7 +27,7 @@ export default function RandomWord({ onSet, isShown }) {
       id: 4,
       cate: 'champions',
       exam: [
-        'Gragas', 'Thresh', 'Hecarim', 'Catelin', 'Morgana', 'vex', 'ezreal', 'Garen', 'Casadin', 'Zinx', 'Galio', 'Darius'
+        'Gragas', 'Thresh', 'Hecarim', 'Catelin', 'Morgana', 'vex', 'ezreal', 'Garen', 'Casadin', 'Zinx', 'Galio', 'Darius', 'Sena'
       ]
     }
   ]
